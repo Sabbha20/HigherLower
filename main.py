@@ -6,6 +6,9 @@ from replit import clear
 
 pick_a = random.randint(0,len(data))
 pick_b = random.randint(0,len(data))
+if pick_a == pick_b:
+  pick_b = random.randint(0,len(data))
+
 
 #print(data[pick_a])
 #print(data[pick_b])
@@ -35,6 +38,8 @@ while ans:
     score+=1
     pick_a = pick_b
     pick_b = random.randint(0,len(data))
+    if pick_a == pick_b:
+      pick_b = random.randint(0,len(data))
     ans = True
   else:
     clear()
